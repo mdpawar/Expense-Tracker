@@ -41,9 +41,7 @@
           <th></th>
         </tr>
       </thead>
-      <tbody>
-        <!-- Expense rows will be dynamically added here -->
-      </tbody>
+      
     </table>
 
     <div id="expenseDetails" class="mt-4" style="display: none;">
@@ -67,7 +65,7 @@
     const expenseDetailsDescription = document.getElementById('expenseDetailsDescription');
     const expenseDetailsCategory = document.getElementById('expenseDetailsCategory');
     const editExpenseButton = document.getElementById('editExpenseButton');
-    const closeDetailsButton = document.getElementById('closeDetailsButton');
+    //const closeDetailsButton = document.getElementById('closeDetailsButton');
 
     // Function to render expense rows in the table
     function renderExpenseRow(expense) {
@@ -141,42 +139,7 @@
       }
     }
 
-    // // Function to show expense details
-    // function showExpenseDetails(expense) {
-    //   expenseDetailsAmount.textContent = `$${expense.amount}`;
-    //   expenseDetailsDescription.textContent = expense.description;
-    //   expenseDetailsCategory.textContent = expense.category;
-
-    //   expenseDetails.style.display = 'block';
-    //   editExpenseButton.addEventListener('click', () => editExpense(expense));
-    //   closeDetailsButton.addEventListener('click', hideExpenseDetails);
-    // }
-
-    // // Function to hide expense details
-    // function hideExpenseDetails() {
-    //   expenseDetails.style.display = 'none';
-    //   editExpenseButton.removeEventListener('click', () => editExpense());
-    //   closeDetailsButton.removeEventListener('click', hideExpenseDetails);
-    // }
-
-    // // Function to edit an expense
-    // function editExpense(expense) {
-    //   const newAmount = prompt('Enter new expense amount:', expense.amount);
-    //   const newDescription = prompt('Enter new expense description:', expense.description);
-    //   const newCategory = prompt('Enter new expense category:', expense.category);
-
-    //   if (newAmount && newDescription && newCategory) {
-    //     expense.amount = newAmount;
-    //     expense.description = newDescription;
-    //     expense.category = newCategory;
-
-    //     localStorage.setItem('expenses', JSON.stringify(expenses));
-    //     displayExpenses();
-    //     showExpenseDetails(expense);
-    //   }
-    // }
-
-    // Event listener for form submission
+      // Event listener for form submission
     expenseForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
